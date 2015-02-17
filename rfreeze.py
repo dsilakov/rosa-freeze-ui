@@ -159,7 +159,7 @@ def main():
     app = QApplication(sys.argv)
 
     translator = QtCore.QTranslator(app)
-    translator.load("RFreeze_" + locale.getlocale()[0] + ".qm", ".")
+    translator.load("RFreeze_" + locale.getlocale()[0] + ".qm", "/usr/share/rosa-freeze-ui/i18n")
     app.installTranslator(translator)
 
     w = QWidget()
