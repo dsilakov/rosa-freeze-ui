@@ -4,10 +4,11 @@ import sys
 import os
 import locale
 
-from PyQt5.QtWidgets import QApplication, QWidget, QDialog
+from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QFileDialog, QMessageBox
 from PyQt5 import QtCore, QtGui
 
 from ui_rfreeze import Ui_RFreeze
+import rc_rfreeze
 
 from rosa_freeze import rosa_freeze
 
@@ -21,13 +22,14 @@ class RFreezeUI(QDialog):
         super(RFreezeUI, self).__init__()
         self.ui = Ui_RFreeze()
         self.ui.setupUi(self)
-        self.setFixedSize(400,300)
         self.ui.btnExit.clicked.connect(self.exitClicked)
         self.ui.btnEnable.clicked.connect(self.enableClicked)
+        self.ui.btnAddFolder.clicked.connect(self.addFolderClicked)
+        self.ui.btnRmFolder.clicked.connect(self.rmFolderClicked)
         self.ui.comboStorage.currentIndexChanged.connect(self.storageChanged)
 
         for d in default_skip_dirs:
-            self.ui.textSkipFolders.append("/" + d)
+            self.ui.folderList.addItem("/" + d)
 
 	self.switchEnableBtnText()
 	self.storageChanged()
@@ -54,7 +56,7 @@ class RFreezeUI(QDialog):
             self.ui.lineDevName.setStyleSheet(white)
             self.ui.labelDevice.setText(_translate("RFreeze", "Device name:"));
             self.ui.lineDevName.setEnabled(1)
-            self.ui.lineDevName.setPlaceholderText(_translate("Enter device name"))
+            self.ui.lineDevName.setPlaceholderText(_translate("RFreeze", "Enter device name"))
         elif storageType == "folder":
             white = "QWidget { background-color:#FFFFFF;}"
             self.ui.lineDevName.setStyleSheet(white)
@@ -65,6 +67,28 @@ class RFreezeUI(QDialog):
 
     def exitClicked(self):
         self.close()
+
+    def addFolderClicked(self):
+        new_dir = str(QFileDialog.getExistingDirectory(self,_translate("RFreeze", "Select Directory"), "/"))
+
+	d = new_dir
+        d = d.replace("/", "", 1)
+        if "/" in d:
+            QMessageBox.warning(self,
+    					_translate("RFreeze", "Can't choose subfolder"),
+    					_translate("RFreeze", "Subfolders are not supported, you can choose only top-level directories"),
+    					QMessageBox.Ok
+    				    )
+            return 1
+
+        exists = self.ui.folderList.findItems(new_dir, QtCore.Qt.MatchExactly)
+        if not exists:
+            self.ui.folderList.addItem(new_dir)
+            self.ui.folderList.sortItems()
+
+    def rmFolderClicked(self):
+        for i in self.ui.folderList.selectedItems():
+            self.ui.folderList.takeItem(self.ui.folderList.row(i))
 
     def enableClicked(self):
         if self.currentAction == "Disable":
@@ -87,9 +111,9 @@ class RFreezeUI(QDialog):
                 storage = "folder"
                 folder = self.ui.lineDevName.text()
 
-            skip_lines = self.ui.textSkipFolders.toPlainText()
             skip_dirs = []
-            for d in skip_lines.split("\n"):
+            for i in xrange(self.ui.folderList.count()):
+                d = self.ui.folderList.item(i).text()
                 if os.path.isdir(d):
                     d = d.replace("/", "", 1)
                     if "/" in d:
