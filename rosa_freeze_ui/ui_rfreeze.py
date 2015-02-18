@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rfreeze.ui'
 #
-# Created: Tue Feb 17 09:29:25 2015
+# Created: Wed Feb 18 04:42:38 2015
 #      by: PyQt5 UI code generator 5.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -97,13 +97,13 @@ class Ui_RFreeze(object):
         self.verticalLayout_3.addWidget(self.btnExit)
         self.btnAddFolder = QtWidgets.QCommandLinkButton(RFreeze)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("images/green-plus-th.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/images/green-plus-th.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnAddFolder.setIcon(icon)
         self.btnAddFolder.setObjectName("btnAddFolder")
         self.verticalLayout_3.addWidget(self.btnAddFolder)
         self.btnRmFolder = QtWidgets.QCommandLinkButton(RFreeze)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("images/red-minus-th.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/images/red-minus-th.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnRmFolder.setIcon(icon1)
         self.btnRmFolder.setObjectName("btnRmFolder")
         self.verticalLayout_3.addWidget(self.btnRmFolder)
@@ -118,7 +118,7 @@ class Ui_RFreeze(object):
     def retranslateUi(self, RFreeze):
         _translate = QtCore.QCoreApplication.translate
         RFreeze.setWindowTitle(_translate("RFreeze", "ROSA Freeze"))
-        self.label.setText(_translate("RFreeze", "Storage:"))
+        self.label.setText(_translate("RFreeze", "Storage type to store new file versions:"))
         self.comboStorage.setItemText(0, _translate("RFreeze", "tmpfs"))
         self.comboStorage.setItemText(1, _translate("RFreeze", "device"))
         self.comboStorage.setItemText(2, _translate("RFreeze", "folder"))

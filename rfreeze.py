@@ -7,8 +7,8 @@ import locale
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QFileDialog, QMessageBox
 from PyQt5 import QtCore, QtGui
 
-from ui_rfreeze import Ui_RFreeze
-import rc_rfreeze
+from rosa_freeze_ui.ui_rfreeze import Ui_RFreeze
+from rosa_freeze_ui import rc_rfreeze
 
 from rosa_freeze import rosa_freeze
 

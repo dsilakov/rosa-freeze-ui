@@ -44,7 +44,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>Storage:</string>
+            <string>Storage type to store new file versions:</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -168,7 +168,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>images/green-plus-th.png</normaloff>images/green-plus-th.png</iconset>
+           <normaloff>:/images/green-plus-th.png</normaloff>:/images/green-plus-th.png</iconset>
          </property>
         </widget>
        </item>
@@ -179,7 +179,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>images/red-minus-th.png</normaloff>images/red-minus-th.png</iconset>
+           <normaloff>:/images/red-minus-th.png</normaloff>:/images/red-minus-th.png</iconset>
          </property>
         </widget>
        </item>

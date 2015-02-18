@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<!DOCTYPE TS><TS version="2.0" language="ru_RU" sourcelanguage="">
 <context>
     <name>RFreeze</name>
     <message>
@@ -9,7 +8,7 @@
         <translation>Неприменимо</translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="125"/>
+        <location filename="rfreeze.py" line="57"/>
         <source>Device name:</source>
         <translation>Имя устройства:</translation>
     </message>
@@ -79,7 +78,7 @@
         <translation>Отключить</translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="127"/>
+        <location filename="rfreeze.py" line="152"/>
         <source>Enable</source>
         <translation>Включить</translation>
     </message>
@@ -91,37 +90,22 @@
     <message>
         <location filename="ui_rfreeze.py" line="120"/>
         <source>ROSA Freeze</source>
-        <translation>ROSA Freeze</translation>
+        <translation type="unfinished">ROSA Freeze</translation>
     </message>
     <message>
         <location filename="ui_rfreeze.py" line="128"/>
         <source>Exit</source>
-        <translation>Выйти</translation>
+        <translation type="unfinished">Выйти</translation>
     </message>
     <message>
         <location filename="ui_rfreeze.py" line="121"/>
-        <source>Storage:</source>
-        <translation>Устройство:</translation>
-    </message>
-    <message>
-        <location filename="ui_rfreeze.py" line="122"/>
-        <source>tmpfs</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="ui_rfreeze.py" line="123"/>
-        <source>device</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="ui_rfreeze.py" line="124"/>
-        <source>folder</source>
-        <translation></translation>
+        <source>Storage type to store new file versions:</source>
+        <translation type="unfinished">Тип хранилища для измененных файлов:</translation>
     </message>
     <message>
         <location filename="ui_rfreeze.py" line="126"/>
         <source>Folders to skip:</source>
-        <translation>Незамораживаемые папки:</translation>
+        <translation type="unfinished">Незамораживаемые папки:</translation>
     </message>
     <message>
         <location filename="rfreeze.py" line="59"/>
@@ -146,12 +130,27 @@
     <message>
         <location filename="ui_rfreeze.py" line="129"/>
         <source>Add folder</source>
-        <translation>Добавить директорию</translation>
+        <translation type="unfinished">Добавить директорию</translation>
     </message>
     <message>
         <location filename="ui_rfreeze.py" line="130"/>
         <source>Remove folder</source>
-        <translation>Исключить директорию</translation>
+        <translation type="unfinished">Исключить директорию</translation>
+    </message>
+    <message>
+        <location filename="ui_rfreeze.py" line="122"/>
+        <source>tmpfs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ui_rfreeze.py" line="123"/>
+        <source>device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ui_rfreeze.py" line="124"/>
+        <source>folder</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
