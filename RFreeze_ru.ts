@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="ru_RU" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="ru_RU">
 <context>
     <name>RFreeze</name>
     <message>
@@ -43,69 +44,69 @@
         <translation>Режим заморозки уже включен</translation>
     </message>
     <message>
-        <location filename="rfreeze.py" line="132"/>
+        <location filename="rfreeze.py" line="136"/>
         <source>Freeze mode was disabled but the system was not rebooted after that</source>
         <translation>Режим заморозки был отключен, но систему после этого не перезагружалась</translation>
     </message>
     <message>
-        <location filename="rfreeze.py" line="134"/>
+        <location filename="rfreeze.py" line="142"/>
         <source>failed to get UUID for the storage device</source>
         <translation>не удалось получить UUID устройства</translation>
     </message>
     <message>
-        <location filename="rfreeze.py" line="136"/>
+        <location filename="rfreeze.py" line="148"/>
         <source>storage device is already mounted</source>
         <translation>устройство уже смонтировано</translation>
     </message>
     <message>
-        <location filename="rfreeze.py" line="138"/>
+        <location filename="rfreeze.py" line="154"/>
         <source>path to the folder is not absolute</source>
         <translation>путь до папки не является абсолютным</translation>
     </message>
     <message>
-        <location filename="rfreeze.py" line="140"/>
+        <location filename="rfreeze.py" line="160"/>
         <source>can&apos;t determine top-level parent for the folder</source>
         <translation>не могу определить родителя для папки</translation>
     </message>
     <message>
-        <location filename="rfreeze.py" line="142"/>
+        <location filename="rfreeze.py" line="166"/>
         <source>smth went wrong during &apos;os.system&apos; run</source>
         <translation>что-то пошло не так при вызове системной команды</translation>
     </message>
     <message>
-        <location filename="rfreeze.py" line="148"/>
+        <location filename="rfreeze.py" line="176"/>
         <source>Disable</source>
         <translation>Отключить</translation>
     </message>
     <message>
-        <location filename="rfreeze.py" line="152"/>
+        <location filename="rfreeze.py" line="181"/>
         <source>Enable</source>
         <translation>Включить</translation>
     </message>
     <message>
-        <location filename="rfreeze.py" line="156"/>
+        <location filename="rfreeze.py" line="186"/>
         <source>!Reboot</source>
         <translation>!Перезагрузитесь</translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="120"/>
+        <location filename="ui_rfreeze.py" line="158"/>
         <source>ROSA Freeze</source>
         <translation type="unfinished">ROSA Freeze</translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="128"/>
+        <location filename="ui_rfreeze.py" line="162"/>
         <source>Exit</source>
         <translation type="unfinished">Выйти</translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="121"/>
+        <location filename="ui_rfreeze.py" line="164"/>
         <source>Storage type to store new file versions:</source>
         <translation type="unfinished">Тип хранилища для измененных файлов:</translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="126"/>
+        <location filename="ui_rfreeze.py" line="166"/>
         <source>Folders to skip:</source>
-        <translation type="unfinished">Незамораживаемые папки:</translation>
+        <translation type="obsolete">Незамораживаемые папки:</translation>
     </message>
     <message>
         <location filename="rfreeze.py" line="59"/>
@@ -128,29 +129,64 @@
         <translation>Выбор поддиректорий не поддерживается, можно выбирать только директории верхнего уровня</translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="129"/>
+        <location filename="ui_rfreeze.py" line="170"/>
         <source>Add folder</source>
         <translation type="unfinished">Добавить директорию</translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="130"/>
+        <location filename="ui_rfreeze.py" line="171"/>
         <source>Remove folder</source>
         <translation type="unfinished">Исключить директорию</translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="122"/>
+        <location filename="ui_rfreeze.py" line="165"/>
         <source>tmpfs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="123"/>
+        <location filename="ui_rfreeze.py" line="166"/>
         <source>device</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui_rfreeze.py" line="124"/>
+        <location filename="ui_rfreeze.py" line="167"/>
         <source>folder</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ui_rfreeze.py" line="159"/>
+        <source>ROSA Freeze Status:</source>
+        <translation>Статус ROSA Freeze:</translation>
+    </message>
+    <message>
+        <location filename="rfreeze.py" line="178"/>
+        <source>Enabled</source>
+        <translation>Включен</translation>
+    </message>
+    <message>
+        <location filename="ui_rfreeze.py" line="169"/>
+        <source>Folders not subjected to the freeze</source>
+        <translation>Директории, не подлежащие заморозке</translation>
+    </message>
+    <message>
+        <location filename="rfreeze.py" line="166"/>
+        <source>Freeze Error</source>
+        <translation>Ошибка включения/выключения заморозки</translation>
+    </message>
+    <message>
+        <location filename="rfreeze.py" line="183"/>
+        <source>Disabled</source>
+        <translation>Выключен</translation>
+    </message>
+    <message>
+        <location filename="rfreeze.py" line="188"/>
+        <source>Reboot required</source>
+        <translation>Требуется перезагрузка</translation>
+    </message>
+    <message>
+        <location filename="ui_rfreeze.py" line="163"/>
+        <source>Freeze Settings</source>
+        <translation type="unfinished">Параметры заморозки</translation>
     </message>
 </context>
 </TS>

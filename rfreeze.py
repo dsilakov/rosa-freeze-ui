@@ -125,19 +125,47 @@ class RFreezeUI(QDialog):
 
             res = rosa_freeze.enable_freeze(skip_dirs, storage, folder)
             if res == 2:
-                print(_translate("RFreeze", "Freeze mode is already enabled"))
+                QMessageBox.warning(self,
+    					_translate("RFreeze", "Freeze Error"),
+    					_translate("RFreeze", "Freeze mode is already enabled"),
+    					QMessageBox.Ok
+    				    )
             elif res == 3:
-                print(_translate("RFreeze", "Freeze mode was disabled but the system was not rebooted after that"))
+                QMessageBox.warning(self,
+    					_translate("RFreeze", "Freeze Error"),
+    					_translate("RFreeze", "Freeze mode was disabled but the system was not rebooted after that"),
+    					QMessageBox.Ok
+    				    )
             elif res == 4:
-                print(_translate("RFreeze", "failed to get UUID for the storage device"))
+                QMessageBox.warning(self,
+    					_translate("RFreeze", "Freeze Error"),
+    					_translate("RFreeze", "failed to get UUID for the storage device"),
+    					QMessageBox.Ok
+    				    )
             elif res == 5:
-                print(_translate("RFreeze", "storage device is already mounted"))
+                QMessageBox.warning(self,
+    					_translate("RFreeze", "Freeze Error"),
+    					_translate("RFreeze", "storage device is already mounted"),
+    					QMessageBox.Ok
+    				    )
             elif res == 61:
-                print(_translate("RFreeze", "path to the folder is not absolute"))
+                QMessageBox.warning(self,
+    					_translate("RFreeze", "Freeze Error"),
+    					_translate("RFreeze", "path to the folder is not absolute"),
+    					QMessageBox.Ok
+    				    )
             elif res == 62:
-                print(_translate("RFreeze", "can't determine top-level parent for the folder"))
+                QMessageBox.warning(self,
+    					_translate("RFreeze", "Freeze Error"),
+    					_translate("RFreeze", "can't determine top-level parent for the folder"),
+    					QMessageBox.Ok
+    				    )
             elif res == 99:
-                print(_translate("RFreeze", "smth went wrong during 'os.system' run"))
+                QMessageBox.warning(self,
+    					_translate("RFreeze", "Freeze Error"),
+    					_translate("RFreeze", "smth went wrong during 'os.system' run"),
+    					QMessageBox.Ok
+    				    )
             self.switchEnableBtnText()
 
     def switchEnableBtnText(self):
@@ -145,14 +173,17 @@ class RFreezeUI(QDialog):
         if state == "enabled":
             self.ui.btnEnable.setText(_translate("RFreeze", "Disable"))
             self.ui.btnEnable.setEnabled(1)
+            self.ui.label_status.setText(_translate("RFreeze", "Enabled"))
             self.currentAction = "Disable"
         elif state == "disabled":
             self.ui.btnEnable.setText(_translate("RFreeze", "Enable"))
             self.ui.btnEnable.setEnabled(1)
+            self.ui.label_status.setText(_translate("RFreeze", "Disabled"))
             self.currentAction = "Enable"
         else:
             self.ui.btnEnable.setText(_translate("RFreeze", "!Reboot"))
             self.ui.btnEnable.setEnabled(0)
+            self.ui.label_status.setText(_translate("RFreeze", "Reboot required"))
             self.currentAction = "Reboot"
 
 def main():
