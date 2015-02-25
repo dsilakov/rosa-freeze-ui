@@ -11,9 +11,12 @@ from rosa_freeze_ui.ui_rfreeze import Ui_RFreeze
 from rosa_freeze_ui import rc_rfreeze
 
 from rosa_freeze import rosa_freeze
+from rosa_freeze.config import Config
+
+cfg = Config()
 
 # List of root folders that are not mounted over aufs
-default_skip_dirs = ['dev', 'home', 'lost+found', 'media', 'mnt', 'proc', 'run', 'sys', 'tmp']
+default_skip_dirs = cfg['freeze']['skip_dirs'].split()
 
 _translate = QtCore.QCoreApplication.translate
 
