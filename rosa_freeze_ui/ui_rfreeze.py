@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rosa_freeze_ui/rfreeze.ui'
 #
-# Created: Tue Feb 24 09:38:09 2015
+# Created: Fri Feb 27 04:16:54 2015
 #      by: PyQt5 UI code generator 5.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -56,6 +56,9 @@ class Ui_RFreeze(object):
         self.btnEnable = QtWidgets.QPushButton(RFreeze)
         self.btnEnable.setObjectName("btnEnable")
         self.horizontalLayout_2.addWidget(self.btnEnable)
+        self.btnMerge = QtWidgets.QPushButton(RFreeze)
+        self.btnMerge.setObjectName("btnMerge")
+        self.horizontalLayout_2.addWidget(self.btnMerge)
         self.btnExit = QtWidgets.QPushButton(RFreeze)
         self.btnExit.setObjectName("btnExit")
         self.horizontalLayout_2.addWidget(self.btnExit)
@@ -147,6 +150,18 @@ class Ui_RFreeze(object):
         self.verticalLayout_3.addItem(spacerItem4)
         self.horizontalLayout_4.addLayout(self.verticalLayout_3)
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
+        self.gridLayout_2 = QtWidgets.QGridLayout()
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.busyBar = QtWidgets.QProgressBar(RFreeze)
+        self.busyBar.setMaximum(103)
+        self.busyBar.setProperty("value", 24)
+        self.busyBar.setObjectName("busyBar")
+        self.gridLayout_2.addWidget(self.busyBar, 0, 0, 1, 1)
+        self.busyLabel = QtWidgets.QLabel(RFreeze)
+        self.busyLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.busyLabel.setObjectName("busyLabel")
+        self.gridLayout_2.addWidget(self.busyLabel, 0, 0, 1, 1)
+        self.verticalLayout_2.addLayout(self.gridLayout_2)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
         self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
 
@@ -159,6 +174,7 @@ class Ui_RFreeze(object):
         self.label_3.setText(_translate("RFreeze", "ROSA Freeze Status:"))
         self.label_status.setText(_translate("RFreeze", "Enabled"))
         self.btnEnable.setText(_translate("RFreeze", "Enable"))
+        self.btnMerge.setText(_translate("RFreeze", "Save current state"))
         self.btnExit.setText(_translate("RFreeze", "Exit"))
         self.label_2.setText(_translate("RFreeze", "Freeze Settings"))
         self.label.setText(_translate("RFreeze", "Storage type to store new file versions:"))
@@ -169,4 +185,6 @@ class Ui_RFreeze(object):
         self.label_4.setText(_translate("RFreeze", "Folders not subjected to the freeze"))
         self.btnAddFolder.setText(_translate("RFreeze", "Add folder"))
         self.btnRmFolder.setText(_translate("RFreeze", "Remove folder"))
+        self.busyBar.setFormat(_translate("RFreeze", "Working..."))
+        self.busyLabel.setText(_translate("RFreeze", "Working..."))
 
