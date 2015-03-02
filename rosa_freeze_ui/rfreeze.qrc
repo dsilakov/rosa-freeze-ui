@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>images/green-plus-th.png</file>
         <file>images/red-minus-th.png</file>
+        <file>images/rosa-freeze-64.png</file>
     </qresource>
 </RCC>
